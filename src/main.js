@@ -14,7 +14,8 @@ import {
     ConfirmDialog,
     DataTable,
     Dialog,
-    DialogService, Drawer,
+    DialogService,
+    Drawer,
     FileUpload,
     FloatLabel,
     IconField,
@@ -22,10 +23,15 @@ import {
     InputNumber,
     InputText,
     Menu,
-    Rating, Row,
+    Rating,
+    Row,
     Select,
-    SelectButton, Tag, Textarea, Toast,
-    ToastService, Toolbar
+    SelectButton,
+    Tag,
+    Textarea,
+    Toast,
+    ToastService,
+    Toolbar
 } from "primevue";
 import i18n from "./i18n/index.js";
 import router from "./router/index.js";
