@@ -27,6 +27,7 @@ import {
     SelectButton, Tag, Textarea, Toast,
     ToastService, Toolbar
 } from "primevue";
+import i18n from "./i18n/index.js";
 
 createApp(App)
     .use(PrimeVue, {theme: {preset: Material}, ripple: true})
@@ -56,4 +57,5 @@ createApp(App)
     .component('pv-textarea', Textarea)
     .component('pv-toolbar', Toolbar)
     .component('pv-toast', Toast)
+    .use(i18n)
     .mount('#app')
