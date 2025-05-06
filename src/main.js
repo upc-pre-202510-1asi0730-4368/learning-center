@@ -28,6 +28,7 @@ import {
     ToastService, Toolbar
 } from "primevue";
 import i18n from "./i18n/index.js";
+import router from "./router/index.js";
 
 createApp(App)
     .use(PrimeVue, {theme: {preset: Material}, ripple: true})
@@ -58,4 +59,5 @@ createApp(App)
     .component('pv-toolbar', Toolbar)
     .component('pv-toast', Toast)
     .use(i18n)
+    .use(router)
     .mount('#app')
