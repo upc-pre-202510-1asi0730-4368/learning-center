@@ -15,6 +15,13 @@ import {createRouter, createWebHistory} from "vue-router";
 const AboutComponent = () => import('../public/pages/about.component.vue');
 
 /**
+ * Lazy-loaded Category Management component
+ * @const {() => Promise<typeof import('../publishing/pages/category-management.component.vue')>}
+ * @description Asynchronously loads the Category Management page component for handling category administration tasks
+ */
+const CategoryManagementComponent = () => import('../publishing/pages/category-management.component.vue');
+
+/**
  * Lazy-loaded 404 Not Found component
  * @const {() => Promise<typeof import('../public/pages/page-not-found.component.vue')>}
  * @description Asynchronously loads the 404-page component, displayed when no matching route is found
@@ -41,14 +48,16 @@ const PageNotFoundComponent = () => import('../public/pages/page-not-found.compo
  * @description Defines all available routes in the application, including
  * - Home page route (/home)
  * - About page route (/about)
+ * - Category Management route (/publishing/categories)
  * - Default redirect to home (/)
  * - Catch-all route for 404 handling
  */
 const routes = [
-    { path: '/home',            name: 'home',       component: HomeComponent,           meta: { title: 'Home' } },
-    { path: '/about',           name: 'about',      component: AboutComponent,          meta: { title: 'About' } },
-    { path: '/',                name: 'default',    redirect: '/home'},
-    { path: '/:pathMatch(.*)*', name: 'not-found',  component: PageNotFoundComponent,   meta: { title: 'Page Not Found' }}
+    { path: '/home',                    name: 'home',       component: HomeComponent,               meta: { title: 'Home' } },
+    { path: '/about',                   name: 'about',      component: AboutComponent,              meta: { title: 'About' } },
+    { path: '/publishing/categories',   name: 'categories', component: CategoryManagementComponent, meta: {title: 'Categories'}},
+    { path: '/',                        name: 'default',    redirect: '/home'},
+    { path: '/:pathMatch(.*)*',         name: 'not-found',  component: PageNotFoundComponent,       meta: { title: 'Page Not Found' }}
 ];
 
 /**
