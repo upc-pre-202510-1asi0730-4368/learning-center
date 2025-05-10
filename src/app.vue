@@ -24,7 +24,6 @@ export default {
 </script>
 
 <template>
-</template>
 <pv-toast/>
 <pv-confirm-dialog/>
 <header>
@@ -52,5 +51,23 @@ export default {
 <footer>
 <footer-content/>
 </footer>
+</template>
 <style scoped>
+header {
+  flex: 0 0 auto;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+footer {
+  position:  absolute;
+  bottom: 0;
+  padding: 10px;
+  width: 100%;
+  left: 0;
+}
 </style>
