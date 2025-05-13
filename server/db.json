@@ -7,6 +7,22 @@
     {
       "id": 2,
       "name": "ASP.NET Core"
+    },
+    {
+      "id": 3,
+      "name": "Tutorials"
+    },
+    {
+      "id": 4,
+      "name": "Guides"
+    },
+    {
+      "id": 5,
+      "name": "Examples"
+    },
+    {
+      "id": 6,
+      "name": "Samples"
     }
   ]
 }
