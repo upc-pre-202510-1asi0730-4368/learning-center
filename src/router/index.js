@@ -55,7 +55,7 @@ const PageNotFoundComponent = () => import('../public/pages/page-not-found.compo
 const routes = [
     { path: '/home',                    name: 'home',       component: HomeComponent,               meta: { title: 'Home' } },
     { path: '/about',                   name: 'about',      component: AboutComponent,              meta: { title: 'About' } },
-    { path: '/publishing/categories',   name: 'categories', component: CategoryManagementComponent, meta: {title: 'Categories'}},
+    { path: '/publishing/categories',   name: 'categories', component: CategoryManagementComponent, meta: { title: 'Categories'}},
     { path: '/',                        name: 'default',    redirect: '/home'},
     { path: '/:pathMatch(.*)*',         name: 'not-found',  component: PageNotFoundComponent,       meta: { title: 'Page Not Found' }}
 ];
