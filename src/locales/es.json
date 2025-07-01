@@ -8,5 +8,11 @@
     "intro": "Hecho con",
     "use": "utilizando",
     "author":"por el Equipo de Desarrollo de {brand}"
+  },
+  "authentication-section": {
+    "welcome": "Bienvenido",
+    "sign-in": "Iniciar sesión",
+    "sign-up": "Registrarse",
+    "sign-out": "Cerrar sesión"
   }
 }
