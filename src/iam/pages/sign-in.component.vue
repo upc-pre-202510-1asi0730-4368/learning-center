@@ -19,8 +19,8 @@ export default {
     /**
      * Sign in
      * @summary
-     * Sign in user. It uses authentication store to sign in user.
-     * If sign in is successful, it redirects to home page.
+     * Sign in user. It uses an authentication store to sign in user.
+     * If sign in is successful, it redirects to the home page.
      * The store will update the current username and signed in status.
      */
     onSignIn() {

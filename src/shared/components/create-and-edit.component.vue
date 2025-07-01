@@ -15,7 +15,7 @@ export default {
   props: { 
     /**
      * @type {Object|null}
-     * @description The entity object to create or edit
+     * @description The entity to create or edit
      */
     entity: null, 
     
@@ -75,7 +75,7 @@ export default {
     },
     
     /**
-     * Gets the appropriate submit button label based on edit mode
+     * Gets the appropriate submitted button label based on edit mode
      * @returns {String} The submit button label ("Update" for edit mode, "Create" for create new category mode)
      */
     getSubmitLabel() {

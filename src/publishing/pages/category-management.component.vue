@@ -104,7 +104,7 @@ export default {
     },
     
     /**
-     * Handles the request to create a new category
+     * Handles the request to create a new category,
      * Prepares the form for creating a new category and shows the dialog
      */
     onNewItem() {
@@ -147,7 +147,7 @@ export default {
     },
     
     /**
-     * Handles the cancel action from the create/edit dialog
+     * Handles the cancel action from the create/edit dialog,
      * Closes the dialog and resets form state
      */
     onCancelRequested() {
