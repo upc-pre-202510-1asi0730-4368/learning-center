@@ -6,6 +6,9 @@
 
 import HomeComponent from "../public/pages/home.component.vue";
 import {createRouter, createWebHistory} from "vue-router";
+import {authenticationGuard} from "../iam/services/authentication.guard.js";
+import SignUpComponent from "../iam/pages/sign-up.component.vue";
+import SignInComponent from "../iam/pages/sign-in.component.vue";
 
 /**
  * Lazy-loaded About component
@@ -56,6 +59,8 @@ const routes = [
     { path: '/home',                    name: 'home',       component: HomeComponent,               meta: { title: 'Home' } },
     { path: '/about',                   name: 'about',      component: AboutComponent,              meta: { title: 'About' } },
     { path: '/publishing/categories',   name: 'categories', component: CategoryManagementComponent, meta: { title: 'Categories'}},
+    { path: '/sign-in',                 name: 'sign-in',    component: SignInComponent,             meta: { title: 'Sign-In' } },
+    { path: '/sign-up',                 name: 'sign-up',    component: SignUpComponent,             meta: { title: 'Sign-Up' } },
     { path: '/',                        name: 'default',    redirect: '/home'},
     { path: '/:pathMatch(.*)*',         name: 'not-found',  component: PageNotFoundComponent,       meta: { title: 'Page Not Found' }}
 ];
@@ -64,7 +69,7 @@ const routes = [
  * Vue Router instance configuration
  * @type {import('vue-router').Router}
  * @description Creates and configures the Vue Router instance with HTML5 history mode
- * and the defined routes. Uses the BASE_URL from environment variables for proper
+ * and the defined routes. Use the BASE_URL from environment variables for proper
  * base path configuration.
  */
 const router = createRouter({
@@ -86,7 +91,8 @@ router.beforeEach((to, from, next) => {
     // Set the page title
     let baseTitle = 'ACME Learning Center';
     document.title = `${baseTitle} | ${to.meta['title']}`;
-    next();
+    // Call the authentication guard
+    authenticationGuard(to, from, next);
 });
 
 /**
