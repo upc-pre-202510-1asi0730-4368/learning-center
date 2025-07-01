@@ -35,6 +35,11 @@ import {
 } from "primevue";
 import i18n from "./i18n/index.js";
 import router from "./router/index.js";
+import {createPinia} from "pinia";
+
+// Pinia
+const pinia = createPinia();
+
 
 createApp(App)
     .use(PrimeVue, {theme: {preset: Material}, ripple: true})
@@ -66,4 +71,5 @@ createApp(App)
     .component('pv-toast', Toast)
     .use(i18n)
     .use(router)
+    .use(pinia)
     .mount('#app')
