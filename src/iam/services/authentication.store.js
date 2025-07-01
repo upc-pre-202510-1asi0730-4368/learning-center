@@ -12,8 +12,7 @@ const authenticationService = new AuthenticationService();
  * It contains state for signed-in status, user ID, and username.
  * It contains actions to sign-in, sign-up, and sign-out.
  */
-export const useAuthenticationStore = defineStore({
-    id: 'authentication',
+export const useAuthenticationStore = defineStore('authentication',{
     state: () => ({ signedIn: false, userId: 0, username: '' }),
     getters: {
         /**
