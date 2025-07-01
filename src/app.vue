@@ -1,10 +1,11 @@
 <script>
 import LanguageSwitcher from "./public/components/language-switcher.component.vue";
 import FooterContent from "./public/components/footer-content.component.vue";
+import AuthenticationSection from "./iam/components/authentication-section.component.vue";
 
 export default {
   name: 'App',
-  components: {FooterContent, LanguageSwitcher},
+  components: {AuthenticationSection, FooterContent, LanguageSwitcher},
   data() {
     return {
       drawer: false,
@@ -40,6 +41,7 @@ export default {
     </div>
   </template>
   <template #end>
+    <authentication-section/>
     <language-switcher/>
   </template>
 </pv-toolbar>
